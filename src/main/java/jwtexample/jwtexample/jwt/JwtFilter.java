@@ -51,7 +51,7 @@ public class JwtFilter extends GenericFilterBean {
             logger.debug("유효한 JWT 토큰이 없습니다, uri: {}", requestURI);
         }
 
-        filterChain.doFilter(servletRequest, servletResponse);
+        filterChain.doFilter(servletRequest, servletResponse); //filterchian 으로 req, res 받은후 조작, 변경 후 목적지 서블릿으로 전달
     }
 
     /*

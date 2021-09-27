@@ -42,6 +42,7 @@ public class TokenProvider implements InitializingBean {
     private Key key;
 
     //2번: 의존성 주입을 받는다(생성자로)
+    //yml파일에 정의한 propertis를 여기서 읽어옴
     public TokenProvider(
             @Value("${jwt.secret}") String secret,
             @Value("${jwt.token-validity-in-seconds}") long tokenValidityInSeconds) {

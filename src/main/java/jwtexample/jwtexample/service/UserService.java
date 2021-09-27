@@ -44,7 +44,7 @@ public class UserService {
                 .username(userDto.getUsername())
                 .password(passwordEncoder.encode(userDto.getPassword()))
                 .nickname(userDto.getNickname())
-                .authorities(Collections.singleton(authority))
+                .authorities(Collections.singleton(authority)) //한객의 객체만 저장 가능항 컬렉션
                 .activated(true)
                 .build();
 

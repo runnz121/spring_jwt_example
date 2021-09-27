@@ -18,8 +18,11 @@ import org.springframework.web.filter.CorsFilter;
 
 @EnableWebSecurity
 
+//https://ncucu.me/136
 //@PreAuthorize어노테이션을 메소드 단위로 추가하기위해 적용
+//securityconfig가적용 안되서 추가 사용
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+//아래 환경설정 메소드 오버라이딩하기 위해 불러옴
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final TokenProvider tokenProvider;
     private final CorsFilter corsFilter;
